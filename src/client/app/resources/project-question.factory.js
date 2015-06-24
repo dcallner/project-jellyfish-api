@@ -6,8 +6,14 @@
 
   /** @ngInject */
   function ProjectQuestionFactory($resource) {
-    var ProjectQuestion = $resource('/api/v1/project_questions/:id', {id: '@id'}, {
-      update: {method: 'PUT'}
+    var ProjectQuestion = $resource('/api/v1/project_questions/:id',{
+      id: '@id',
+      //'includes[]': ['options']
+    }, {
+      update: {
+        method: 'PUT',
+        isArray: false
+      }
     });
 
     ProjectQuestion.defaults = {
