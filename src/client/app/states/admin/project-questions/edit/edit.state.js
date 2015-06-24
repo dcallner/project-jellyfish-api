@@ -35,7 +35,7 @@
   }
 
   /** @ngInject */
-  function resolveProjectQuestion(ProjectQuestion, $stateParams){
+  function resolveProjectQuestion(ProjectQuestion, $stateParams) {
     return ProjectQuestion.get({id: $stateParams.pqId}).$promise;
   }
 
