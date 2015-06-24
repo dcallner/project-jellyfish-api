@@ -4,7 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  question   :string(255)
-#  help_text  :string(255)
+#  help  :string(255)
 #  required   :boolean
 #  created_at :datetime
 #  updated_at :datetime
